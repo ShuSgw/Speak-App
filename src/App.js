@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import SpeakerButton from "./components/speaker_btn";
+import Header from "./components/header";
+import Main from "./components/main";
+
 class App extends Component {
   render() {
     return (
@@ -19,30 +21,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="jumbotron">
-          <header className="text-center">
-            <h2>Smart Speaker's Commands Speaker （SSCS）</h2>
-            <p>スマートスピーカーのコマンドを日本語で発音して代行してくれるサイトです。コマンドをクリックすると発音されます。<br />
-              コマンドの追加は<a href="https://github.com/eishis/smart-speakers-commands-speaker" target="_blank" rel="noopener noreferrer">こちらから</a>お願いします。
-            </p>
-          </header>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-6 mb-2 mt-2">
-              <h2><i className="fab fa-amazon"></i> Alexa</h2>
-              <div className="row">
-                <SpeakerButton type="Alexa" />
-              </div>
-            </div>
-            <div className="col-sm-6 mb-2 mt-2">
-              <h2><i className="fab fa-google"></i> Google Home</h2>
-              <div className="row">
-                <SpeakerButton type="Google" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Header />
+        <Main />
       </div>
     );
   }
