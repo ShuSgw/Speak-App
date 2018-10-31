@@ -32,6 +32,8 @@ export default class Header extends Component {
                 break;
         }
         ssu.text = typeFromConst + " " + this.state.textValue;
+        var voices = window.speechSynthesis.getVoices();
+        ssu.voice = voices[0];
         speechSynthesis.speak(ssu);
     }
     render() {

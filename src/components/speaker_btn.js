@@ -30,25 +30,20 @@ export default class SpeakerButton extends Component {
         //         </button>
         //     </div>
         // );
-        console.log(this.type)
         return (
-            this.type.commands.map((command, i) => {
-                return (
-                    <div key={i} className="col-sm-6 mb-2 mt-2">
-                        <button className="card" onClick={() => this.clicked(command.pronoun)}>
-                            <div className="card-body">
-                                <h4 className="card-title text-left">
-                                    <i className="fas fa-play"></i>
-                                    {command.title}
-                                </h4>
-                                <p className="card-text text-left">
-                                    {command.description}
-                                </p>
-                            </div>
-                        </button>
+            <div className="col-sm-6 mb-2 mt-2">
+                <button className="card" onClick={() => this.clicked(this.props.pronoun)}>
+                    <div className="card-body">
+                        <h4 className="card-title text-left">
+                            <i className="fas fa-play"></i>
+                            {this.props.title}
+                        </h4>
+                        <p className="card-text text-left">
+                            {this.props.description}
+                        </p>
                     </div>
-                );
-            })
+                </button>
+            </div>
         );
     }
     clicked = (pronoun) => {
